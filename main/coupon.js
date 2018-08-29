@@ -8,11 +8,17 @@ var read=readLine.createInterface(
 );
 function couponno()
 {
-    read.question("enter your coupons:",function(userinput)
+    read.question("enter minimum no:",function(min)
     {
+        read.question("enter maximum no:",function(max){
+            read.question("enter the no of coupons:",function(num){
+        utility.couponno(min,max,num);
+
         
         utility.couponno(userinput);
         read.close();
+            });
+        });
     }
 );
 }

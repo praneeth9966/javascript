@@ -8,10 +8,10 @@ var read=readLine.createInterface(
 );
 function leap()
 {
-    read.question("enter a 4 digit no:",function(userinput)
+    read.question("enter a 4 digit no:",function(year)
     {
         
-        utility.leap(userinput);
+        utility.leap(year);
         read.close();
     }
 );

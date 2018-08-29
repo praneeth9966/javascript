@@ -8,10 +8,10 @@ var read=readLine.createInterface(
 );
 function harmonicno()
 {
-    read.question("enter a no:",function(userinput)
+    read.question("enter a no:",function(num)
     {
         
-        utility.harmonicno(userinput);
+        utility.harmonicno(num);
         read.close();
     }
 );

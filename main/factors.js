@@ -8,10 +8,10 @@ var read=readLine.createInterface(
 );
 function primefactor()
 {
-    read.question("enter a no:",function(userinput)
+    read.question("enter a no:",function(num)
     {
         
-        utility.primefactor(userinput);
+        utility.primefactor(num);
         read.close();
     }
 );
