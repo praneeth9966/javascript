@@ -19,7 +19,7 @@ var prompt=require('prompt-sync')();
 var utility=require('../utility/utility.js');
 function doPerm()
 {
-    var str=prompt('enter a string');
+    var str=prompt('enter a string: ');
     utility.doPerm(str);
 }
 doPerm();
