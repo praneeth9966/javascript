@@ -8,11 +8,15 @@ var read=readLine.createInterface(
 );
 function primeNumber()
 {
-    read.question("enter n value: ",function(n)
+    read.question("enter min value: ",function(a)
     {
-        
-        utility.primeNumber(n);
+     read.question("enter max value",function(b)
+     {   
+        var min=parseInt(a);
+         var max=parseInt(b);
+        utility.primeNumber(min,max);
         read.close();
+     });
     }
 );
 }

@@ -8,11 +8,14 @@ var read=readLine.createInterface(
 );
 function primeanagram()
 {
-    read.question("enter n value: ",function(n)
+    read.question("enter minimun value: ",function(min)
     {
+        read.question("enter maximun value",function(max)
+        {
         
-        utility.primeanagram(n);
+        utility.primeanagram(min,max);
         read.close();
+    });
     }
 );
 }
