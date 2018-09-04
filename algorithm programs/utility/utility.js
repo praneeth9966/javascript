@@ -1,4 +1,14 @@
-const la=require("lodash")
+/***************************************************** 
+ *  Execution : 1.default node
+ *  Purpose   : Learning Algorithm Programs
+ *  @description
+ *  @file     : utility.js
+ *  @overview :anagram.js,primenumbers.js,primeanapal.js,test.js,guessnumber.js,binarysearchwordlist.js,InsertionSort.js,BubbleSort.js,MergeSort.js,vendingmachine.js,dayOfWeek.js,temperatureConversion.js,monthlyPayment.js,newtonsqrt.js,binarytodecimal,binarynibbles.js
+ *  @module   : utility
+ *  @author   : BridgeLabz <Praneeth Kunapareddy>
+ *  @version  : 1.0
+ *  @since    : 30-aug-2018
+******************************************************/
 module.exports=
 {
     /** An Anagram Detection
@@ -31,7 +41,7 @@ module.exports=
     
     },
               /** Prime Number Range
-                * @param - n value taking from the user
+                * @param - min amd max value taking from the user
                 * @description - Take a range of 0 ­ 1000 Numbers and find the Prime numbers in that range.
                 */     
     primeNumber : function(min,max)
@@ -125,7 +135,11 @@ module.exports=
             }
         }
     },
-
+            /** Prime numbers that are Pallindrome and Anagram
+              * @param - min and max value taking from the user
+              * @description - prime numbers between 0 and 1000 and that are pallindrome and anagram
+              */
+    
     primeanapal : function(min,max)
     {
         var pallindrome=[];
@@ -171,7 +185,11 @@ module.exports=
         }
         return(rev);
     },
-
+        /** binary search method for integer
+          * @param - size taking from the user
+          * @description - Check using Stopwatch the Elapsed Time for method call
+          */
+    
     binary :function(size)
     {
         var prompt=require('prompt-sync')();
@@ -235,7 +253,11 @@ module.exports=
                     console.log("please enter integer");
                 } 
     },
-
+                /** binary search method for string
+                  * @param - size taking from the user
+                  * @description - Check using Stopwatch the Elapsed Time for method call
+                  */
+    
     binarystring :function(size)
     {
         var prompt=require('prompt-sync')();
@@ -299,7 +321,11 @@ module.exports=
                 console.log("please enter string");
             }
     },
-
+      /** insertionsort method for integer
+        * @param - size taking from the user
+        * @description - Check using Stopwatch the Elapsed Time for every method call
+        */
+    
     insertionsortInteger : function(size)
     {
             var prompt=require('prompt-sync')();
@@ -350,6 +376,11 @@ module.exports=
                     arr[j+1]=key;
         }
     },
+        /** insertionsort method for strings
+          * @param - size taking from the user
+          * @description - Check using Stopwatch the Elapsed Time for method call
+          */
+    
     insertionsortString : function(size)
     {
             var prompt=require('prompt-sync')();
@@ -405,6 +436,11 @@ module.exports=
         }
     },
 
+        /** bubblesort method for integer
+          * @param - size taking from the user
+          * @description - Check using Stopwatch the Elapsed Time for method call
+          */
+    
     bubblesortInteger : function(size)
     {
         var prompt=require('prompt-sync')();
@@ -455,7 +491,11 @@ module.exports=
             }
         }
     },
-
+        /** bubblesort method for strings
+          * @param - size taking from the user
+          * @description - Check using Stopwatch the Elapsed Time for method call
+          */
+    
     bubblesortString : function(size)
     {
         var prompt=require('prompt-sync')();
@@ -506,7 +546,12 @@ module.exports=
             }
         }
     },
-   
+       /** Binary Search the Word from Word List
+         * @param - value taking from the user
+         * @description - Read in a list of words from File. Then prompt the user to enter a word to
+         *                search the list. The program reports if the search word is found in the list.
+         */
+    
     binarywordlist : function(arr,value)
     {
         arr=arr.sort();
@@ -543,7 +588,11 @@ module.exports=
        
     },
 
-
+        /** Bubble Sort
+          * @param - size taking from the user
+          * @description - Reads in integers prints them in sorted order using Bubble Sort
+          */
+      
     bubbleSort : function(size)
     {
         var prompt=require('prompt-sync')();
@@ -565,19 +614,26 @@ module.exports=
                 }
             }
 
-        if(count==arr.length)
-        {
-        console.log(arr);
-        this.bubble(arr);
-        arr.forEach(element =>
-            {
-                console.log(parseInt(element));
-            }); 
-        }
-        else
-        {
-            console.log("please enter integers");
-        }
+                    var flag=false;
+                    if(count==arr.length)
+                    {
+                        console.log(arr);
+                        this.bubble(arr);
+                        arr.forEach(element =>
+                        {
+                            console.log(parseInt(element));
+                            flag=true;
+                        });
+                        
+                    }        
+                        else
+                        {
+                            console.log("please enter integers");
+                            process.exit();
+                        }
+                        if(flag)
+                        process.exit();
+                        
     },
     bubble : function(arr)
     {
@@ -593,8 +649,14 @@ module.exports=
                 }
             }
         }
+        //return arr;
+        //console.log(arr);
     },
-
+        /** Insertion Sort
+          * @param - size taking from the user
+          * @description - Reads in strings from standard input and prints them in sorted order.
+          */
+      
     InsertionSort : function(size)
     {
             var prompt=require('prompt-sync')();
@@ -616,7 +678,7 @@ module.exports=
                     count++;
                 }
             }
-
+                var flag=false;
         if(count==arr.length)
         {
             console.log(arr);
@@ -625,12 +687,16 @@ module.exports=
             arr.forEach(element =>
                 {
                     console.log(element);
+                    flag=true;
                 });
             }
             else
             {
                 console.log("please enter a string");
-            }         
+                process.exit();
+            }    
+            if(flag)
+            process.exit();     
     },
     insertion : function(arr)
     {
@@ -646,6 +712,11 @@ module.exports=
             arr[j+1]=key;
         }
     },
+        /** Merge Sort
+          * @param - size taking from the user
+          * @description - To Merge Sort an array, we divide it into two halves, sort the two halves
+          *                independently, and then merge the results to sort the full array.
+          */
 
     mergeSort : function(size)
     {
@@ -663,6 +734,7 @@ module.exports=
             
                     console.log(parseInt(element));
                 });
+                process.exit();
     },  
     merge : function(arr)
     {
@@ -684,11 +756,11 @@ module.exports=
                     a2[j]=parseInt(arr[i]);
             
                 }
-        this.merge(a1);
-        this.merge(a2);
+        this.merge(a1);// divinding
+        this.merge(a2);//dividing
         this.merger(a1,a2,arr);
     },
-    merger : function(a,b,c)
+    merger : function(a,b,c)// merging
     {
         var i=0,j=0,k=0;
         while(i<a.length && j<b.length)
@@ -733,6 +805,12 @@ module.exports=
       return elapsed;
        
    },
+        /** temperaturConversion
+          * @param - option taking from the user
+          * @description -  given the temperature in fahrenheit as input outputs the temperature in Celsius or viceversa using the
+          *                 formula
+          */
+      
     temperature : function(read,option)
     {
         switch(option)
@@ -756,6 +834,14 @@ module.exports=
         
         }
     },
+    /** monthlyPayment
+      * @param - P,Y,R taking from the user
+      * @description -to calculate monthlyPayment that reads in three 
+      *               command­line arguments P, Y, and R and calculates the monthly payments you
+      *               would have to make over Y years to pay off a P principal loan amount at R per cent
+                      interest compounded monthly.                 
+      */
+      
     monthlypayment : function(P,Y,R)
     {
         var payment,n,x;
@@ -765,14 +851,20 @@ module.exports=
         payment=(P*r)/(1-Math.pow(x,(-n)));
         console.log("monthly payment is: "+payment);
     },
-    
+        /** dayOfWeek
+          * @param - m,d,y taking from the user
+          * @description - takes a date as input and
+                           prints the day of the week that date falls on. 
+          */
+          
     dayofweek : function(m,d,y)
     {
-        var y1,x,m1,d1;
-       y1=(y-Math.floor((14-m)/12));
-        x=(y1+Math.floor(y1/4)-Math.floor(y1/100)+Math.floor(y1/400));
-        m1=(m+12*(Math.floor(14-m)/12)-2);
-        d1=Math.floor((d+x+(31*m1)/12)%7);
+        var y1,x,m1,d1,z;
+        z=(14-m);
+       y1=y-Math.floor(z/12);
+        x=y1+Math.floor(y1/4)-Math.floor(y1/100)+Math.floor(y1/400);
+        m1=m+12*(Math.floor(z/12))-2;
+        d1=Math.floor((d+x+((31*m1)/12))%7);
        
         switch(d1)
         {
@@ -793,8 +885,15 @@ module.exports=
 
         }
     },
-
-    vending : function(amount)
+        /** Vending Machine
+          * @param - amount taking from the user
+          * @description - There is 1, 2, 5, 10, 50, 100, 500 and 1000 Rs Notes which can be
+                          returned by Vending Machine. Write a Program to calculate the minimum number
+                          of Notes as well as the Notes to be returned by the Vending Machine as a
+                          Change
+          */
+      
+    vending : function(read,amount)
     {
         var amount,count=0;
         a=1;
@@ -842,7 +941,7 @@ module.exports=
                     {
                         var t=Math.floor(amount/5);
                         console.log("the number of $5 notes"+t);
-                        amount=amount-(n*5);
+                        amount=amount-(t*5);
                         count+=t;
                     }
 
@@ -866,8 +965,14 @@ module.exports=
         }
         count=parseInt(count);
         console.log("the minimum no of notes to return the change by machine: "+count);
+        read.close();
     },
-
+            /** square root of a nonnegative number
+          * @param - c taking from the user
+          * @description -  sqrt to compute the square root of a nonnegative number c
+          *                given in the input using Newton's method:
+          */
+      
     newtonsqrt : function(c)
     {
         var t=c;
@@ -879,36 +984,42 @@ module.exports=
         }
         console.log("the square root of number is: "+t);
     },
-
-    toBinary : function(n)
+        /** toBinary
+          * @param - n taking from the user
+          * @description - converting decimal to binary
+          */
+      
+   toBinary : function(n) 
     {
-            if(n==0)
-            {
-                console.log(0);
-            }
-            else
-            {
-                var arr=[],i;
-                for(i=0;n>0;i++)
-                {
-                    arr[i]=Math.floor(n%2);
-                    n=Math.floor(n/2);
-                }
-                console.log("\n binary of given number is: ");
-                for(i=arr.length-1;i>=0;i--)
-                {
-                    console.log(arr[i]);
-                }
-            }
+        if(n==0)
+        {
+            console.log(0);
+        }
+        else
+        {
+            var arr=[],i;
+        }
+        for(var i=0;n>0;i++)
+        {
+            arr[i]=Math.floor(n%2);
+            n=Math.floor(n/2);
+        }
+        console.log("\n Binary of given number is: ");
+        console.log(arr.reverse());//reversing the array and printing the elements in that array
     },
-
+        /** binaryNibbles
+          * @param - n taking from the user
+          * @description - Swap nibbles and find the new number.
+          *                Find the resultant number is the number is a power of 2.
+          */
+      
     binarynibbles : function(n)
     {
         var flag=0,s1,s2;
-        s1=n & 0x0F;
-        s2=n & 0xF0;
-        s1=s1<<4;
-        s2=s2>>4;
+        s1=n & 0x0F;//0x0F means it takes last 4 bits one
+        s2=n & 0xF0;// 0xF0 means it takes last butone 4 bits one
+        s1=s1<<4;// shifting 4 bits leftside
+        s2=s2>>4;// shifting 4 bits rightside
         var res=s1 | s2;
         console.log(res);
         for(var i=res;i>0;i--)
@@ -929,70 +1040,43 @@ module.exports=
             }
 
     },
-
-    guessnumber : function(first,range)
+        /** Guessing number
+          * @param - number taking from the user
+          * @description - ­> takes a command­line argument N, asks you to think of a number
+               between 0 and N­1, where N = 2^n, and always guesses the answer with n questions
+          */
+      
+    questionNumber : function(number)
     {
-        var prompt=require('prompt-sync')();
-        var arr=new Array(range);
-        var a=0;
-        for(var i=0;i<range;i++)
-        {
-            arr[i]=prompt("enter the numbers: ");
-        }
+        var prompt =require('prompt-sync')()
+        var n = Math.pow(2,number)
+        console.log('Think of a number between 0 and ' + n )
+        var low = 0;
+        var high = n;
+        var secret = this.question(low,high)
+        console.log('Your number is '+secret)
+    },
         
-           /* var a=/[a-zA-Z]/g;
-            var b=/[0-9]/g;
-            var c=/[!@#$%^&*()<>+-/"'?]/g;
-            var count=0;
-        for(var i=0;i<arr.length;i++)
-        {
-            if(arr[i].search(a)==-1 && arr[i].search(c)==-1)
-            {
-                count++;
-            }
-        }
-
-        if(count==arr.length)
-        {*/
-            arr.sort(function(a,b){
-            return a-b;
-            });
-            console.log(arr);
-            var first=0,last=range-1;
-            var value=prompt("enter the element to search: ");
-            while(first<=last)
-            {
-                var mid=Math.floor((first+last)/2);
-                if(value==arr[mid])
+    question : function(low ,high)
+    {
+        var prompt =require('prompt-sync')()
+            if ((high - low) == 1) 
+            return low;
+            else        
+            var mid =low + (high-low) / 2;
+                console.log("Is it less than  " , +mid)
+                var choice = prompt('Enter the choice in true or false : ')
+                if(choice ==='true')
+                 {
+                    return this.question(low,mid)
+                 }
+                else if(choice === 'false')
                 {
-                    a=1;
-                    break;
+                    return this.question(mid,high)
                 }
                 else
                 {
-                    if(value>arr[mid])
-                    {
-                        first=mid+1;
-                    }
-                    else
-                    {
-                        last=mid-1;
-                    }
+                    console.log('Not valid')
                 }
-            }   
-                if(a==1)
-                {
-                    console.log("element found at index: "+mid);
-                }
-                else
-                {
-                    console.log("element not found");
-                }
-        /*}
-            else
-            {
-                console.log("please enter integer");
-            }*/
-        return value;
     },
 }
