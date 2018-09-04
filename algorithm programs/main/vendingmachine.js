@@ -8,10 +8,10 @@ var read=readLine.createInterface(
 );
 function vending()
 {
-    read.question("enter a amount: ",function(amount)
+    read.question("enter a V value: ",function(V)
     {
-        utility.vending(amount);
-            read.close();
+        utility.vending(read,V);
+        //read.close();
     });
 }
 

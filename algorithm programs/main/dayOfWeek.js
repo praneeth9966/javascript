@@ -11,10 +11,13 @@ const args=require('yargs').argv;*/
 
 function dayofweek()
 {
-    read.question("enter month: ",function(m)
+    read.question("enter month: ",function(month)
     {
-        read.question("enetr day: ",function(d){
-            read.question("enter year: ",function(y){
+        read.question("enetr day: ",function(day){
+            read.question("enter year: ",function(year){
+                var m=parseInt(month);
+                var d=parseInt(day);
+                var y=parseInt(year);
             utility.dayofweek(m,d,y);
             read.close();
             });

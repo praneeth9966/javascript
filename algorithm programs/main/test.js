@@ -44,5 +44,6 @@ var prompt=require('prompt-sync')();
         return b-a;
     });
     console.log(arr);
+    process.exit();
     }
     test();
