@@ -7,13 +7,15 @@ var read=readline.createInterface({
 });
 
 
-var data = fs.readFileSync('file.txt');
-data= data.toString().toLocaleLowerCase().split(' ');
-function unorderedList()
+var data = fs.readFileSync('hash.txt');
+data= data.toString().split(' ');
+//console.log(data);
+
+function hashing()
 {
     read.question("Enter the element to be searched: ", function(ele){
-        utility.unorderedList(data,ele);
+        utility.hashing(data,ele);
         read.close();
     });
 }
-unorderedList();
+hashing();
