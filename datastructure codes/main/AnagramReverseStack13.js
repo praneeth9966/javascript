@@ -1,5 +1,5 @@
 
-var utility1 = require('/home/admininistrator/workspace/datastructure codes/utility/utility.js')
+var utility1 = require('../utility/LinkedList.js')
 let prompt = require('prompt-sync')();
 
 let utility = require('/home/admininistrator/workspace/datastructure codes/utility/array.js');
