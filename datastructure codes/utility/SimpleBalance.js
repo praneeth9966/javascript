@@ -47,5 +47,38 @@ class Stack {
     
 
 }
+module.exports={
+    simple : function(exp)
+    {
+        var stack=new Stack();
+        var count=0,counter=0;
+        for(var i=0;i<exp.length;i++)
+        {
 
-module.exports=Stack;
+            if(exp[i]=="(")
+            {
+                stack.push(exp[i]);
+                count++;
+                
+            }
+            else if(exp[i]==")")
+            {
+                
+                stack.pop();
+                counter++;
+                
+            }
+
+            //console.log(stack.printStack());
+            
+        }
+        //console.log(stack.printStack());
+        //console.log(stack.isEmpty());
+        if(count==counter)
+        {
+            console.log("true");
+        }
+        else
+        console.log("false");
+    }
+}

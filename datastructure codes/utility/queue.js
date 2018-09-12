@@ -48,45 +48,5 @@ class Queue {
 
 
 }
-/*module.exports={
-    banking: function(read,number)
-    {
-        var q=new Queue();
-        var bal=1000;
 
-        for(var i=0; i<number; i++)
-        {
-            q.enqueue(i);
-        }
-        
-        while(q.len())
-        {
-            var option= read.question("Enter 1 to withdraw and 2 to deposit amount: ");
-            if(option==1) 
-            {
-                var withdraw_amt=read.question("Enter the amount to be withdrawn: ");
-                if(bal>=withdraw_amt)
-                {
-                    bal=bal-withdraw_amt;
-                    console.log("Total available balanace= "+bal+" INR");
-                }else{
-                    console.log("Sorry!!! Running out of balance");
-                    process.exit();
-                }
-            }
-            else if(option==2)
-            {
-                var dep_amt=read.question("Enter the amount to be deposited: ");
-                bal=(parseInt(bal)+parseInt(dep_amt));
-                console.log("Total available balanace= "+bal+" INR");
-            }
-            else{
-                console.log("Sorry you can't perform any operation! Contact the branch manager");
-                break;
-            }
-            q.dequeue();
-        }
-        
-    },
-}*/
 module.exports=Queue;
