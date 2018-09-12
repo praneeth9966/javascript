@@ -1,0 +1,22 @@
+{
+    "rice" :
+   [{
+        "name" : ["basmati","sona","kurnool"],
+        "weight" : [24,20,30],
+        "price" : [10,100,150]
+        
+    }],
+    "pulses" :
+    {
+        "name" : ["pulse1","pulse2","pulse3"],
+        "weight" : [10,20,30],
+        "price" : [30,60,90]
+    },
+    "wheats" :
+    {
+        "name" : ["wheat1","wheat2","wheat3"],
+        "weight" : [100,200,300],
+        "price" : [1,2,3]
+    }
+
+}

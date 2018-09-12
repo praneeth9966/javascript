@@ -1,0 +1,24 @@
+{
+    "stock1" :
+    {
+        "name" : "pulsar220",
+        "number_of_share" : 10,
+        "price" : 100
+        
+    },
+    "stock2" :
+    {
+        "name" : "duke",
+        "number_of_share" : 20,
+        "price" : 200
+        
+    },
+    "stock3" :
+    {
+        "name" : "ns200",
+        "number_of_share" : 30,
+        "price" : 300
+        
+    }
+
+}
